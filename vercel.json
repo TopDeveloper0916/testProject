@@ -1,0 +1,15 @@
+{
+  version 2,
+  builds [
+    {
+      src .app.js,
+      use @vercelnode
+    }
+  ],
+  rewrites [
+    {
+      source (.),
+      destination app.js
+    }
+  ]
+}
