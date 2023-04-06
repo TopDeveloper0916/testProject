@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+	.page-header
+		h3 #{title}
+
+	table
+		each val in client
+			tr
+				td= val.name
+				td= val.email

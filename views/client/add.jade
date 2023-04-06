@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  .page-header
+    h3 Add Client
+
+   form.form-horizontal(id='new-client-form', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      label.col-sm-3.control-label(for='name') Name
+      .col-sm-7
+        input.form-control(type='name', name='name', id='name', placeholder='Name', autofocus, required)
+    .form-group
+      label.col-sm-3.control-label(for='email') Email
+      .col-sm-7
+        input.form-control(type='email', name='email', id='email', placeholder='Email', required)
+    .form-group
+      label.col-sm-3.control-label(for='Website') Website
+      .col-sm-7
+        input.form-control(type='Website', name='Website', id='Website', placeholder='Website', required)
+    .form-group
+      .col-sm-offset-3.col-sm-7
+        button.btn.btn-success(type='submit')
+          i.fa.fa-user-plus
+          | Add Client
